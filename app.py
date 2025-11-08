@@ -5,7 +5,7 @@ app.secret_key = 'clave_super_secreta'  # Necesario para usar flash()
 
 # --- RUTAS PRINCIPALES ---
 
-@app.route('/')
+@app.route('/')##
 def home():
     return render_template('index.html')
 
