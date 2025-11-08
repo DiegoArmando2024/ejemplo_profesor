@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio — Proyecto Flask</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      /* Pequeños estilos personalizados */
+      .hero {
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(90deg, rgba(13,110,253,0.08), rgba(108,117,125,0.04));
+      }
+      .feature-card { transition: transform .18s ease; }
+      .feature-card:hover { transform: translateY(-6px); }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#">MiProyecto</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#features">Características</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+            <li class="nav-item"><a class="btn btn-primary ms-2" href="#">Iniciar sesión</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <h1 class="display-5">Bienvenido a tu proyecto Flask</h1>
+            <p class="lead">Plantilla de inicio lista para integrar con Flask. Limpia, responsiva y fácil de adaptar.</p>
+            <p>
+              <a href="#features" class="btn btn-outline-primary me-2">Ver características</a>
+              <a href="#contact" class="btn btn-primary">Contáctame</a>
+            </p>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Estado del proyecto</h5>
+                <p class="card-text">Rutas básicas: <code>/</code> — <code>/about</code> — <code>/contact</code></p>
+                <small class="text-muted">Adaptar este bloque para mostrar datos dinámicos desde Flask.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- FEATURES -->
+    <section id="features" class="py-5">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col text-center">
+            <h2>Características</h2>
+            <p class="text-muted">Bloques listos para convertir en componentes de tu aplicación.</p>
+          </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="card feature-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Integración con Flask</h5>
+                <p class="card-text">Convierte este HTML en plantilla Jinja reemplazando rutas de recursos por <code>url_for('static', filename='...')</code>.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card feature-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Componentes reutilizables</h5>
+                <p class="card-text">Secciones limpias (hero, features, contacto) pensadas para reutilizarse en otras vistas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card feature-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Responsive</h5>
+                <p class="card-text">Basado en Bootstrap 5: se verá bien en móvil, tablet y escritorio.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3>Contáctanos</h3>
+            <p class="text-muted">Formulario de ejemplo listo para conectar a un endpoint Flask.</p>
+            <form action="/contact" method="post">
+              <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" name="name" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Correo</label>
+                <input type="email" name="email" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Mensaje</label>
+                <textarea name="message" rows="4" class="form-control"></textarea>
+              </div>
+              <button class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+          <div class="col-lg-6 d-none d-lg-block">
+            <h5>Dirección</h5>
+            <p>Nemocón, Cundinamarca — Colombia</p>
+            <h6>Teléfono</h6>
+            <p>+57 300 000 0000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 text-center">
+      <div class="container">
+        <small class="text-muted">© 2025 MiProyecto. Hecho con ♥ por Diego.</small>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
